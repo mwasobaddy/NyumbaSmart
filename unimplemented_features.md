@@ -15,9 +15,9 @@ This document tracks the features that still need to be implemented in the Nyumb
 - [ ] Complete Tenant Screening System
   - [x] Tenant screening database structure and models
   - [x] Tenant screening Livewire component setup
-  - [ ] Application submission
-  - [ ] Background check integration
-  - [ ] Approval/rejection workflow
+  - [x] Application submission
+  - [x] Background check integration
+  - [x] Approval/rejection workflow
 
 ## Property Management
 
@@ -97,3 +97,7 @@ This document tracks the features that still need to be implemented in the Nyumb
   - [ ] Language selection
 
 ## Let's implement these features one by one and check them off as we complete them!
+
+
+Make sure you mark after every implementation.
+Let us proceed implementing the Property Management

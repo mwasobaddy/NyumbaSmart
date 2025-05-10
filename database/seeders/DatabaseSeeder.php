@@ -15,18 +15,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Seed application roles
-        Role::firstOrCreate(['name' => 'Developer']);
-        Role::firstOrCreate(['name' => 'Landlord']);
-        Role::firstOrCreate(['name' => 'Tenant']);
-        Role::firstOrCreate(['name' => 'Secretary']);
+        // Seed application roles for both web and sanctum guards
+        foreach (['Developer', 'Landlord', 'Tenant', 'Secretary'] as $roleName) {
+            foreach (['web', 'sanctum'] as $guard) {
+                Role::firstOrCreate(['name' => $roleName, 'guard_name' => $guard]);
+            }
+        }
 
         // Create initial developer user
         $dev = User::firstOrCreate([
             'email' => 'admin@example.com',
         ], [
             'name' => 'Admin',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('1234@Mwas'),
         ]);
         $dev->assignRole('Developer');
 
@@ -53,6 +54,7 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'password' => Hash::make('1234@Mwas'),
         ]);
     }
 }
