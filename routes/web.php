@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\TenantScreening\Manager;
+use App\Livewire\PropertyInspections\PropertyInspectionManager;
 
 Route::view('/', 'welcome');
 
@@ -26,6 +27,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/properties/{property}/units', function () {
         return view('units.index');
     })->name('units.index');
+    
+    // Property Inspection Routes
+    Route::get('/property-inspections', PropertyInspectionManager::class)->name('property-inspections.index');
     
     // Invoice & Billing Routes
     Route::get('/invoices', function () {

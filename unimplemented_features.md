@@ -21,14 +21,14 @@ This document tracks the features that still need to be implemented in the Nyumb
 
 ## Property Management
 
-- [ ] Property Inspection Features
-  - [ ] Scheduling inspections
-  - [ ] Inspection reports
-  - [ ] Photo documentation
-- [ ] Property Renovation Tracking
-  - [ ] Schedule renovations
-  - [ ] Budget tracking
-  - [ ] Vendor management
+- [x] Property Inspection Features
+  - [x] Scheduling inspections
+  - [x] Inspection reports
+  - [x] Photo documentation
+- [x] Property Renovation Tracking
+  - [x] Schedule renovations
+  - [x] Budget tracking
+  - [x] Vendor management
 
 ## Financial Features
 
@@ -100,4 +100,4 @@ This document tracks the features that still need to be implemented in the Nyumb
 
 
 Make sure you mark after every implementation.
-Let us proceed implementing the Property Management
+Let us proceed implementing the Property Renovation Tracking - Budget tracking feature next

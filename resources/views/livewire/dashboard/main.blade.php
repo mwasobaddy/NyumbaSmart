@@ -79,6 +79,11 @@
                         <p class="text-sm text-purple-600">Configure pricing plans and features</p>
                     </a>
                     
+                    <a href="{{ route('property-inspections.index') }}" class="block bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg border border-indigo-200">
+                        <h4 class="font-medium text-indigo-700">Property Inspections</h4>
+                        <p class="text-sm text-indigo-600">View and manage all property inspections</p>
+                    </a>
+                    
                     <a href="#" class="block bg-green-50 hover:bg-green-100 p-4 rounded-lg border border-green-200">
                         <h4 class="font-medium text-green-700">System Settings</h4>
                         <p class="text-sm text-green-600">Configure application settings and parameters</p>
@@ -280,6 +285,11 @@
                         <p class="text-sm text-yellow-600">View and manage repair requests</p>
                     </a>
                     
+                    <a href="{{ route('property-inspections.index') }}" class="block bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg border border-indigo-200">
+                        <h4 class="font-medium text-indigo-700">Property Inspections</h4>
+                        <p class="text-sm text-indigo-600">Schedule and manage inspections</p>
+                    </a>
+                    
                     <a href="{{ route('reviews.index') }}" class="block bg-purple-50 hover:bg-purple-100 p-4 rounded-lg border border-purple-200">
                         <h4 class="font-medium text-purple-700">Reviews</h4>
                         <p class="text-sm text-purple-600">See what tenants are saying</p>
@@ -407,6 +417,11 @@
                 <a href="{{ route('vacate.index') }}" class="block bg-yellow-50 hover:bg-yellow-100 p-4 rounded-lg border border-yellow-200">
                     <h4 class="font-medium text-yellow-700">Give Vacate Notice</h4>
                     <p class="text-sm text-yellow-600">Submit notice when moving out</p>
+                </a>
+                
+                <a href="{{ route('property-inspections.index') }}" class="block bg-indigo-50 hover:bg-indigo-100 p-4 rounded-lg border border-indigo-200">
+                    <h4 class="font-medium text-indigo-700">Property Inspections</h4>
+                    <p class="text-sm text-indigo-600">View and sign inspection reports</p>
                 </a>
                 
                 <a href="{{ route('reviews.index') }}" class="block bg-purple-50 hover:bg-purple-100 p-4 rounded-lg border border-purple-200">
