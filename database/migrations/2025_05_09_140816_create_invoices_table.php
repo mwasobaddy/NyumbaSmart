@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('unit_id')->constrained()->onDelete('cascade');
+            $table->decimal('amount', 10, 2);
+            $table->date('due_date');
+            $table->enum('status', ['pending','paid','overdue','cancelled'])->default('pending');
+            $table->decimal('penalty', 10, 2)->default(0);
             $table->timestamps();
         });
     }

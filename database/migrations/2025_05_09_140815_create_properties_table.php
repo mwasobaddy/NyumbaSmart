@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('name');
+            $table->string('address');
+            $table->text('description')->nullable();
+            $table->string('logo_url')->nullable();
+            $table->string('theme_color')->nullable();
+            $table->string('app_name')->nullable();
             $table->timestamps();
         });
     }

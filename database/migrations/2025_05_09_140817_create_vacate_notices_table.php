@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('vacate_notices', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('unit_id')->constrained()->onDelete('cascade');
+            $table->date('notice_date');
+            $table->date('move_out_date');
+            $table->text('reason')->nullable();
+            $table->enum('status', ['pending','processed'])->default('pending');
             $table->timestamps();
         });
     }

@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('units', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('property_id')->constrained()->onDelete('cascade');
+            $table->string('unit_number');
+            $table->decimal('rent', 10, 2);
+            $table->boolean('manual_water')->default(false);
+            $table->boolean('manual_electricity')->default(false);
+            $table->enum('status', ['vacant','occupied','maintenance'])->default('vacant');
             $table->timestamps();
         });
     }

@@ -30,6 +30,24 @@ class DatabaseSeeder extends Seeder
         ]);
         $dev->assignRole('Developer');
 
+        // Seed subscription plans
+        \App\Models\SubscriptionPlan::firstOrCreate(
+            ['name' => 'Pilot (Free)'],
+            ['price' => 0, 'duration_months' => 1, 'property_limit' => 5, 'unit_limit' => 20, 'features' => json_encode(['email_sms_reminders','basic_analytics'])]
+        );
+        \App\Models\SubscriptionPlan::firstOrCreate(
+            ['name' => 'Basic'],
+            ['price' => 1000, 'duration_months' => 1, 'property_limit' => 10, 'unit_limit' => 50, 'features' => json_encode(['mpesa_paypal','auto_invoicing','standard_analytics'])]
+        );
+        \App\Models\SubscriptionPlan::firstOrCreate(
+            ['name' => 'Standard'],
+            ['price' => 3000, 'duration_months' => 1, 'property_limit' => 50, 'unit_limit' => 200, 'features' => json_encode(['manual_billing','reviews','custom_branding','reports'])]
+        );
+        \App\Models\SubscriptionPlan::firstOrCreate(
+            ['name' => 'Premium'],
+            ['price' => 6000, 'duration_months' => 1, 'property_limit' => -1, 'unit_limit' => -1, 'features' => json_encode(['white_label','api_access','advanced_analytics','priority_support'])]
+        );
+
         // User::factory(10)->create();
 
         User::factory()->create([

@@ -59,3 +59,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+I've added the schedule for the ProcessBackgroundCheckStatus job to run daily in your console.php file.
+
+Now, for this scheduled job to work correctly, we need to make sure your Laravel application is set up to run the scheduler. In Laravel, you typically need to add the following Cron entry on your server:
+
+* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+This Cron entry will run the Laravel scheduler every minute, which will then check if any scheduled tasks are due to run.
+
+Would you like me to implement any additional features for your tenant screening system, such as notifications when screening status changes or customizing how often this job runs?
